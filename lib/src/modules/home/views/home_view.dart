@@ -12,6 +12,20 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         title: const Text('HomeView'),
         centerTitle: true,
+        actions: [
+          PopupMenuButton(
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                onTap: () async => await controller.logout(),
+                child: const Text('Logout Account'),
+              ),
+              PopupMenuItem(
+                onTap: () async => await controller.delete(),
+                child: const Text('Delete Account'),
+              ),
+            ],
+          ),
+        ],
       ),
       body: const Center(
         child: Text(
