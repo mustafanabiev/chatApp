@@ -31,14 +31,14 @@ class LoginView extends GetView<LoginController> {
                   ),
                   const SizedBox(height: 12),
                   CustomTextField(
-                    controller: controller.emailCtl,
+                    controller: controller.passwordCtl,
                     labelText: 'Password',
                     hintText: 'Enter your password',
                   ),
                 ],
               ),
               CustomButton(
-                onPressed: () {},
+                onPressed: () async => await controller.loginRegister(isLogin),
                 text: isLogin ? 'Login' : 'Register',
               ),
             ],

@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({
-    super.key,
-  });
+  const MyApp(this.isAuth, {super.key});
+  final bool isAuth;
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: "Application",
-      initialRoute: AppPages.INITIAL,
+      initialRoute: isAuth ? AppPages.HOME : AppPages.FLASH_CHAT,
       getPages: AppPages.routes,
     );
   }
