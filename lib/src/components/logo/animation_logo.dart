@@ -26,13 +26,10 @@ class _AnimationLogoState extends State<AnimationLogo>
 
     controller.forward();
 
-    animation.addStatusListener((status) {
-      print(status);
-    });
+    animation.addStatusListener((status) {});
 
     controller.addListener(() {
       setState(() {});
-      print(animation.value);
     });
   }
 

@@ -2,10 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class StreamMessage extends StatelessWidget {
-  const StreamMessage(
-    this.streamMessage, {
-    super.key,
-  });
+  const StreamMessage(this.streamMessage, {super.key});
 
   final Stream<QuerySnapshot<Map<String, dynamic>>> streamMessage;
 
