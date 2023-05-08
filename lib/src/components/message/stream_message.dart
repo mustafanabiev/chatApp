@@ -5,10 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class StreamMessage extends StatelessWidget {
-  const StreamMessage(
-    this.streamMessage, {
-    super.key,
-  });
+  const StreamMessage(this.streamMessage, {super.key});
 
   final Stream<QuerySnapshot<Map<String, dynamic>>> streamMessage;
 
